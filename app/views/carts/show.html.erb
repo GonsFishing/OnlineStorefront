@@ -2,12 +2,12 @@
   <aside id=notice><%= notice %></aside>
 <% end %>
 
-<h2>Your shopping cart<h2>
+<h2>Your shopping cart</h2>
 <ul>
   <%= @cart.line_items.each do |item| %>
-    <li><%= item.product.title%>
-  <%= end %>
-<ul>
+    <li><%= item.product.title%></li>
+  <% end %>
+</ul>
 
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>
